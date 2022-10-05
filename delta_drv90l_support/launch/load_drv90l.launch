@@ -1,0 +1,3 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find delta_drv90l_support)/urdf/drv90l.xacro'" />
+</launch>

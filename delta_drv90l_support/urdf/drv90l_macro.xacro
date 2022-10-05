@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+
+<!-- 
+
+<author email="chun.peng@deltaww.com">Hsien Chun Peng</author>
+<maintainer email="chun.peng@deltaww.com">TIM group</maintainer>
+<license>BSD</license>
+
+Software License Agreement (BSD License)
+
+Copyright (c) 2021, Delta Electronics, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above
+    copyright notice, this list of conditions and the following
+    disclaimer in the documentation and/or other materials provided
+    with the distribution.
+  * Neither the name of the Delta Electronics nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="delta_drv90l" params="prefix">
+  <!-- properties -->
+  <xacro:property name="path_meshes_" value="package://delta_drv90l_support/meshes"/>
+  <xacro:property name="arm_joint1_" value="${radians(170)}"/>
+  <xacro:property name="arm_joint2_lower_" value="${radians(105)}"/>
+  <xacro:property name="arm_joint2_upper_" value="${radians(135)}"/>
+  <xacro:property name="arm_joint3_lower_" value="${radians(205)}"/>
+  <xacro:property name="arm_joint3_upper_" value="${radians(65)}"/>
+  <xacro:property name="arm_joint4_" value="${radians(190)}"/>
+  <xacro:property name="arm_joint5_" value="${radians(120)}"/>
+  <xacro:property name="arm_joint6_" value="${radians(360)}"/>
+  <xacro:property name="arm_joint1_vel_" value="${radians(370)}"/>
+  <xacro:property name="arm_joint2_vel_" value="${radians(260)}"/>
+  <xacro:property name="arm_joint3_vel_" value="${radians(410)}"/>
+  <xacro:property name="arm_joint4_vel_" value="${radians(550)}"/>
+  <xacro:property name="arm_joint5_vel_" value="${radians(550)}"/>
+  <xacro:property name="arm_joint6_vel_" value="${radians(820)}"/>
+  <!-- properties -->
+
+  <!-- link list -->
+  <link name="${prefix}base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/base_link.STL"/>
+      </geometry>
+      <material name="visual_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/base_link.STL"/>
+      </geometry>
+      <material name="collision_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_1.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_1.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_2.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_2.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_3.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_3.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_4.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_4.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_5.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_5.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+
+  <link name="${prefix}link_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1" ixy="0" ixz="0"
+                       iyy="1" iyz="0"
+                               izz="1" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_6.STL"/>
+      </geometry>
+      <material name="visual_material"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="${path_meshes_}/drv90l/visual/link_6.STL"/>
+      </geometry>
+      <material name="collision_material"/>
+    </collision>
+  </link>
+  <!-- end of link list -->
+
+  <!-- joint list -->
+  <joint name="${prefix}joint_1" type="revolute">
+    <origin xyz="0 0 0.226" rpy="0 0 0" />
+    <parent link="${prefix}base_link"/>
+    <child link="${prefix}link_1"/>
+    <axis xyz="0 0 1" />
+    <limit
+      lower="-${arm_joint1_}"
+      upper="${arm_joint1_}"
+      effort="0"
+      velocity="${arm_joint1_vel_}" />
+  </joint>
+
+  <joint name="${prefix}joint_2" type="revolute">
+    <origin xyz="0.025 0 0.148" rpy="0 0 0" />
+    <parent link="${prefix}link_1"/>
+    <child link="${prefix}link_2"/>
+    <axis xyz="0 1 0" />
+    <limit
+      lower="-${arm_joint2_lower_}"
+      upper="${arm_joint2_upper_}"
+      effort="0"
+      velocity="${arm_joint2_vel_}" />
+  </joint>
+
+  <joint name="${prefix}joint_3" type="revolute">
+    <origin xyz="0 0 0.44" rpy="0 0 0" />
+    <parent link="${prefix}link_2"/>
+    <child link="${prefix}link_3"/>
+    <axis xyz="0 1 0" />
+    <limit
+      lower="-${arm_joint3_lower_}"
+      upper="${arm_joint3_upper_}"
+      effort="0"
+      velocity="${arm_joint3_vel_}" />
+  </joint>
+
+  <joint name="${prefix}joint_4" type="revolute">
+    <origin xyz="0.145 0 0.04" rpy="0 0 0" />
+    <parent link="${prefix}link_3"/>
+    <child link="${prefix}link_4"/>
+    <axis xyz="1 0 0" />
+    <limit
+      lower="-${arm_joint4_}"
+      upper="${arm_joint4_}"
+      effort="0"
+      velocity="${arm_joint4_vel_}" />
+  </joint>
+
+  <joint name="${prefix}joint_5" type="revolute">
+    <origin xyz="0.29 0 0" rpy="0 0 0" />
+    <parent link="${prefix}link_4"/>
+    <child link="${prefix}link_5"/>
+    <axis xyz="0 1 0" />
+    <limit
+      lower="-${arm_joint5_}"
+      upper="${arm_joint5_}"
+      effort="0"
+      velocity="${arm_joint5_vel_}" />
+  </joint>
+
+  <joint name="${prefix}joint_6" type="revolute">
+    <origin xyz="0.064 0 0" rpy="0 0 0" />
+    <parent link="${prefix}link_5"/>
+    <child link="${prefix}link_6"/>
+    <axis xyz="1 0 0" />
+    <limit
+      lower="-${arm_joint6_}"
+      upper="${arm_joint6_}"
+      effort="0"
+      velocity="${arm_joint6_vel_}" />
+  </joint>
+  <!-- end of joint list -->
+
+  <!-- ROS-Industrial 'base' frame: base_link to Delta World Coordinates transform -->
+  <link name="${prefix}base" />
+  <joint name="${prefix}base_link-base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="${prefix}base_link" />
+    <child link="${prefix}base" />
+  </joint>
+
+  <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+  <link name="${prefix}flange" />
+  <joint name="${prefix}link_6-flange" type="fixed">
+    <origin xyz="0.01 0 0" rpy="0 0 0" />
+    <parent link="${prefix}link_6" />
+    <child link="${prefix}flange" />
+  </joint>
+
+  <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+  <link name="${prefix}tool0" />
+  <joint name="${prefix}flange-tool0" type="fixed">
+    <origin xyz="0 0 0" rpy="0 ${radians(-90)} ${radians(180)}" />
+    <parent link="${prefix}flange" />
+    <child link="${prefix}tool0" />
+  </joint>
+
+</xacro:macro>
+</robot>

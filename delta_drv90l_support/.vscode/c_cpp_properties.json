@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/chunpeng/ros_workspace/unity_tim_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/machine_description/delta_ros_industrial/delta_driver/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/machine_description/delta_ros_industrial/delta_drs60l6so_moveit_config/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/machine_description/delta_ros_industrial/delta_drv70l_ikfast_plugin/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/device_interface_construction/device_interface/device_iclass/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/moveit_robot_control/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_2f_gripper_action_server/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_2f_gripper_control/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_3f_gripper_control/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_ethercat/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/gripper/robotiq/robotiq_ft_sensor/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/tim_unity_bridge/include/**",
+        "/home/chunpeng/ros_workspace/unity_tim_ws/src/transform_publisher/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

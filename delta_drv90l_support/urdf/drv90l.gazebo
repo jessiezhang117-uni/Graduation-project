@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+
+<!-- 
+
+<author email="chun.peng@deltaww.com">Hsien Chun Peng</author>
+<maintainer email="chun.peng@deltaww.com">TIM group</maintainer>
+<license>BSD</license>
+
+Software License Agreement (BSD License)
+
+Copyright (c) 2021, Delta Electronics, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above
+    copyright notice, this list of conditions and the following
+    disclaimer in the documentation and/or other materials provided
+    with the distribution.
+  * Neither the name of the Delta Electronics nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="drv90l_gazebo" params="gazebo_robot_name">
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/${gazebo_robot_name}</robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>true</legacyModeNS>
+      </plugin>
+    </gazebo>
+
+    <gazebo reference="${gazebo_robot_name}base_footprint">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}base_link">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_1">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_2">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_3">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_4">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_5">
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+    <gazebo reference="${gazebo_robot_name}link_6">s
+      <material>Gazebo/Orange</material>
+      <turnGravityOff>true</turnGravityOff>
+    </gazebo>
+
+  </xacro:macro>
+  <xacro:macro name="transmission_block" params="prefix">
+    <transmission name="${prefix}joint_1_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_1_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}joint_2_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_2_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}joint_3_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_3_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}joint_4_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_4">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_4_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}joint_5_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_5">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_5_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <transmission name="${prefix}joint_6_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}joint_6">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}joint_6_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+</robot>
