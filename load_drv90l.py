@@ -13,6 +13,7 @@ planeId = p.loadURDF("plane.urdf")
 robotId = p.loadURDF("./delta_drv90l_support/urdf/drv90l.urdf",useFixedBase=True)
 
 
+
 useRealTimeSimulation = 0
 
 if (useRealTimeSimulation):

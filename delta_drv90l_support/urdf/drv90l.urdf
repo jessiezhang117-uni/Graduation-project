@@ -292,7 +292,7 @@
       <lateral_friction value="1.0"/>
     </contact>
   	<inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0.01 0.02"/>
        <mass value="0.1"/>
        <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
     </inertial>
@@ -324,7 +324,7 @@
     </contact>
 
   	<inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 -0.01 0.02"/>
        <mass value="0.1"/>
        <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
     </inertial>
@@ -374,7 +374,7 @@
    </link>
 
       
-   <joint name="pgrasptarget_hand" type="fixed">
+   <joint name="grasptarget_hand" type="fixed">
     <parent link="hand"/>
     <child link="grasptarget"/>
     <origin rpy="0 0 0" xyz="0 0 0.105"/>
