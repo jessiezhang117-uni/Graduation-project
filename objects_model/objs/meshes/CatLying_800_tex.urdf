@@ -13,18 +13,18 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="0.001692408977556107 0.006917458852867832 -0.00709682294264339"/> 
+<origin rpy="1.570796 0 0" xyz="0.0020308907730673315 0.0083009506234414 -0.008516187531172077"/> 
 <geometry> 
-<mesh filename="CatLying_800_tex.obj" scale="1 1 1"/> 
+<mesh filename="CatLying_800_tex.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 <material name="yellow"> 
 <color rgba="0.6 0.6 0.6 1"/> 
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="0.001692408977556107 0.006917458852867832 -0.00709682294264339"/> 
+<origin rpy="1.570796 0 0" xyz="0.0020308907730673315 0.0083009506234414 -0.008516187531172077"/> 
 <geometry> 
-<mesh filename="CatLying_800_tex_col.obj" scale="1 1 1"/> 
+<mesh filename="CatLying_800_tex_col.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 </collision> 
 </link> 

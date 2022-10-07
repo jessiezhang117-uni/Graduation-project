@@ -13,18 +13,18 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="0.009897971812080538 0.01123904161073826 -0.0010907973154362428"/> 
+<origin rpy="1.570796 0 0" xyz="0.011877566174496632 0.013486849932885885 -0.0013089567785234887"/> 
 <geometry> 
-<mesh filename="WedgeShoe2.obj" scale="1 1 1"/> 
+<mesh filename="WedgeShoe2.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 <material name="yellow"> 
 <color rgba="0.6 0.6 0.6 1"/> 
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="0.009897971812080538 0.01123904161073826 -0.0010907973154362428"/> 
+<origin rpy="1.570796 0 0" xyz="0.011877566174496632 0.013486849932885885 -0.0013089567785234887"/> 
 <geometry> 
-<mesh filename="WedgeShoe2_col.obj" scale="1 1 1"/> 
+<mesh filename="WedgeShoe2_col.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 </collision> 
 </link> 

@@ -13,18 +13,18 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="-0.0010718948717948714 0.005487102564102557 -0.0020330384615384624"/> 
+<origin rpy="1.570796 0 0" xyz="-0.0012862738461538457 0.006584523076923084 -0.0024396461538461543"/> 
 <geometry> 
-<mesh filename="FruitDrink_800_tex.obj" scale="1 1 1"/> 
+<mesh filename="FruitDrink_800_tex.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 <material name="yellow"> 
 <color rgba="0.6 0.6 0.6 1"/> 
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="-0.0010718948717948714 0.005487102564102557 -0.0020330384615384624"/> 
+<origin rpy="1.570796 0 0" xyz="-0.0012862738461538457 0.006584523076923084 -0.0024396461538461543"/> 
 <geometry> 
-<mesh filename="FruitDrink_800_tex_col.obj" scale="1 1 1"/> 
+<mesh filename="FruitDrink_800_tex_col.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 </collision> 
 </link> 

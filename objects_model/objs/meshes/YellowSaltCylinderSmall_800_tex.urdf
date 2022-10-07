@@ -13,18 +13,18 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="0.00113271144278607 0.0060543631840795946 -0.0014327213930348263"/> 
+<origin rpy="1.570796 0 0" xyz="0.0013592537313432804 0.007265235820895528 -0.0017192656716417951"/> 
 <geometry> 
-<mesh filename="YellowSaltCylinderSmall_800_tex.obj" scale="1 1 1"/> 
+<mesh filename="YellowSaltCylinderSmall_800_tex.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 <material name="yellow"> 
 <color rgba="0.6 0.6 0.6 1"/> 
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="0.00113271144278607 0.0060543631840795946 -0.0014327213930348263"/> 
+<origin rpy="1.570796 0 0" xyz="0.0013592537313432804 0.007265235820895528 -0.0017192656716417951"/> 
 <geometry> 
-<mesh filename="YellowSaltCylinderSmall_800_tex_col.obj" scale="1 1 1"/> 
+<mesh filename="YellowSaltCylinderSmall_800_tex_col.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 </collision> 
 </link> 

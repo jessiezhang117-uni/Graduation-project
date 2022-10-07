@@ -13,7 +13,7 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="-0.0003036309473977956 0.0032800662062230255 -0.0029888572624529315"/> 
+<origin rpy="1.570796 0 0" xyz="-0.0003036309473977956 0.003280066206223026 -0.0029888572624529315"/> 
 <geometry> 
 <mesh filename="2c0600cdf28535eb8dfc720b465c725c.obj" scale="1 1 1"/> 
 </geometry> 
@@ -22,7 +22,7 @@
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="-0.0003036309473977956 0.0032800662062230255 -0.0029888572624529315"/> 
+<origin rpy="1.570796 0 0" xyz="-0.0003036309473977956 0.003280066206223026 -0.0029888572624529315"/> 
 <geometry> 
 <mesh filename="2c0600cdf28535eb8dfc720b465c725c_col.obj" scale="1 1 1"/> 
 </geometry> 

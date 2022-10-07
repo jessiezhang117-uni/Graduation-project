@@ -13,18 +13,18 @@
 <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/> 
 </inertial> 
 <visual> 
-<origin rpy="1.570796 0 0" xyz="0.00042365250000000153 0.0015209049999999988 -0.003668367500000001"/> 
+<origin rpy="1.570796 0 0" xyz="0.0005083829999999995 0.001825086 -0.004402040999999999"/> 
 <geometry> 
-<mesh filename="Dog_800_tex.obj" scale="1 1 1"/> 
+<mesh filename="Dog_800_tex.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 <material name="yellow"> 
 <color rgba="0.6 0.6 0.6 1"/> 
 </material> 
 </visual> 
 <collision> 
-<origin rpy="1.570796 0 0" xyz="0.00042365250000000153 0.0015209049999999988 -0.003668367500000001"/> 
+<origin rpy="1.570796 0 0" xyz="0.0005083829999999995 0.001825086 -0.004402040999999999"/> 
 <geometry> 
-<mesh filename="Dog_800_tex_col.obj" scale="1 1 1"/> 
+<mesh filename="Dog_800_tex_col.obj" scale="1.2 1.2 1.2"/> 
 </geometry> 
 </collision> 
 </link> 
