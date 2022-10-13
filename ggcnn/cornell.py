@@ -1,13 +1,14 @@
+from matplotlib.widgets import EllipseSelector
 import torch
 import glob
 import os
 import numpy as np
-
+import random
 from grasp import Grasps
 from image import Image,DepthImage
 
 class Cornell(torch.utils.data.Dataset):
-    def __init__(self,file_dir,include_depth=True,include_rgb=True,start = 0.0,end = 1.0,output_size = 300):
+    def __init__(self,file_dir,include_depth=True,include_rgb=True,start = 0.0,end = 1.0,random_rotate=False,random_zoom=False,output_size = 300):
         '''
         :file_dir : str, file path of cornell dataset
         :include_depth : bool
@@ -19,6 +20,8 @@ class Cornell(torch.utils.data.Dataset):
         self.include_depth = include_depth
         self.include_rgb = include_rgb
         self.output_size = output_size
+        self.random_rotate = random_rotate
+        self.random_zoom = random_zoom
         # load dataset with given path 
         graspf = glob.glob(os.path.join(file_dir,'*','pcd*cpos.txt'))
         graspf.sort()
@@ -64,45 +67,74 @@ class Cornell(torch.utils.data.Dataset):
         return center,left,top
 
 
-    def get_rgb(self,idx):
+    def get_rgb(self,idx,rot=0,zoom=1.0):
 
         rgb_img = Image.from_file(self.rgbf[idx])
         rgb_img.normalize()
         center,left,top = self._get_crop_attrs(idx)
+        # first rotate then crop and zoom, finally resize
+        rgb_img.rotate(rot,center)
         rgb_img.crop((left,top),(left+self.output_size,top+self.output_size))
+        rgb_img.zoom(zoom)
         rgb_img.resize((self.output_size, self.output_size))
         
         return rgb_img.img
 
-    def get_depth(self,idx):
+    def get_depth(self,idx,rot=0,zoom=1.0):
 
         depth_img = DepthImage.from_file(self.depthf[idx])
         depth_img.normalize()
         center,left,top = self._get_crop_attrs(idx)
+        depth_img.rotate(rot,center)
         depth_img.crop((left,top),(left+self.output_size,top+self.output_size))
+        depth_img.zoom(zoom)
         depth_img.resize((self.output_size, self.output_size))
 
         return depth_img.img
     
-    def get_grasp(self,idx):
+    def get_grasp(self,idx,rot=0,zoom=1.0):
 
         grs = Grasps.load_from_cornell_files(self.graspf[idx])
-        grs.offset((-(grs.center[0]-self.output_size//2),-(grs.center[1]-self.output_size//2)))
-        pos_img,angle_img,width_img = grs.generate_img(shape = (480,640))
-        
-
+        center,left,top = self._get_crop_attrs(idx)
+        #rotate,offset then zoom
+        grs.rotate(rot,center)
+        grs.offset((-left,-top))
+        grs.zoom(zoom,(self.output_size//2,self.output_size//2))
+    
         pos_img,angle_img,width_img = grs.generate_img(shape = (self.output_size,self.output_size))
 
         return pos_img,angle_img,width_img
 
-    def __getitem__(self,idx):
-        if self.include_depth:
-            depth_img = self.get_depth(idx)
-            x = self.numpy_to_torch(depth_img)
+    def get_raw_grasps(self,idx,rot,zoom):
+
+        raw_grasps = Grasps.load_from_cornell_files(self.graspf[idx])
+        center, left, top = self._get_crop_attrs(idx)
+        raw_grasps.rotate(rot,center)
+        raw_grasps.offset((-left,-top))
+        raw_grasps.zoom(zoom,(self.output_size//2,self.output_size//2))
+
         
+        return raw_grasps
+
+    def __getitem__(self,idx):
+
+        if self.random_rotate:
+            rotations = [0,np.pi/2,2*np.pi/2,3*np.pi/2]
+            rot = random.choice(rotations)
+        else:
+            rot = 0.0
+        if self.random_zoom:
+            zoom_factor = np.random.uniform(0.5,1.0)
+        else:
+            zoom_factor = 1.0
+
+        if self.include_depth:
+            depth_img = self.get_depth(idx,rot=rot,zoom=zoom_factor)
+            x = self.numpy_to_torch(depth_img)
+        # load rgb images
         if self.include_rgb:
-            rgb_img = self.get_rgb(idx)
-            #channel-first
+            rgb_img = self.get_rgb(idx,rot=rot,zoom=zoom_factor)
+            # channel-first
             if rgb_img.shape[2] == 3:
                 rgb_img = np.moveaxis(rgb_img,2,0)
             x = self.numpy_to_torch(rgb_img)
@@ -113,8 +145,8 @@ class Cornell(torch.utils.data.Dataset):
                 )
             )
             
-   
-        pos_img,angle_img,width_img = self.get_grasp(idx)
+
+        pos_img,angle_img,width_img = self.get_grasp(idx,rot=rot,zoom=zoom_factor)
         # mapping the angles
         cos_img = self.numpy_to_torch(np.cos(2*angle_img))
         sin_img = self.numpy_to_torch(np.sin(2*angle_img))
@@ -125,7 +157,7 @@ class Cornell(torch.utils.data.Dataset):
         width_img = np.clip(width_img, 0.0, 150.0)/150.0
         width_img = self.numpy_to_torch(width_img)
         
-        return x,(pos_img,cos_img,sin_img,width_img)
+        return x,(pos_img,cos_img,sin_img,width_img),idx,rot,zoom_factor
     
 
     def __len__(self):

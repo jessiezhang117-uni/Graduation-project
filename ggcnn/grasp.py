@@ -49,16 +49,41 @@ class Grasp:
     
     def compact_polygon_coords(self,shape):
         '''
+        return all the coordinates inside the grasp rectangle
         :shape    : tuple, optional.Image shape which is used to determine the maximum extent of output pixel coordinates.
         :ndarray  : rr,cc row,column coordinates
         ''' 
-        return polygon(self.points[:,0],self.points[:,1],shape)
+        return Grasp_cpaw(self.center, self.angle, self.length, self.width/3).as_gr.polygon_coords(shape)
 
     def offset(self, offset):
         """
         :offset: array [y, x] 
         """
         self.points += np.array(offset).reshape((1, 2))
+    
+    def rotate(self,angle,center):
+        R = np.array(
+            [
+                [np.cos(angle),np.sin(angle)],
+                [-1*np.sin(angle),np.cos(angle)]
+            ]
+        )
+        c = np.array(center).reshape((1,2))
+        self.points = ((np.dot(R,(self.points-c).T)).T+c).astype(np.int)
+    
+    def zoom(self,factor,center):
+        T = np.array(
+            [
+                [1/factor,0],
+                [0,1/factor]
+            ]
+        )
+        c = np.array(center).reshape((1,2))
+        
+        self.points = ((np.dot(T,(self.points - c).T)).T+c).astype(np.int)
+        
+
+
 
 class Grasps:
     def __init__(self,grs = None):
@@ -128,6 +153,13 @@ class Grasps:
 
         return pos_out,angle_out,width_out
     
+    @property
+    def points(self):
+        points = []
+        for gr in self.grs:
+            points.append(gr.points)
+        return points
+
     @property
     def center(self):
         centers = []
