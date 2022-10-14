@@ -1,4 +1,3 @@
-from matplotlib.widgets import EllipseSelector
 import torch
 import glob
 import os
@@ -22,6 +21,7 @@ class Cornell(torch.utils.data.Dataset):
         self.output_size = output_size
         self.random_rotate = random_rotate
         self.random_zoom = random_zoom
+
         # load dataset with given path 
         graspf = glob.glob(os.path.join(file_dir,'*','pcd*cpos.txt'))
         graspf.sort()
@@ -29,7 +29,7 @@ class Cornell(torch.utils.data.Dataset):
         
         l = len(graspf)
         if l == 0:
-            raise FileNotFoundError('Cannot find dataset, check the file path{}'.format(file_dir))
+            raise FileNotFoundError('No dataset files found. Check path{}'.format(file_dir))
         
         rgbf = [filename.replace('cpos.txt','r.png') for filename in graspf]
         depthf = [filename.replace('cpos.txt','d.tiff') for filename in graspf]
@@ -67,16 +67,19 @@ class Cornell(torch.utils.data.Dataset):
         return center,left,top
 
 
-    def get_rgb(self,idx,rot=0,zoom=1.0):
+    def get_rgb(self,idx,rot=0,zoom=1.0,normalise=True):
 
         rgb_img = Image.from_file(self.rgbf[idx])
         rgb_img.normalize()
         center,left,top = self._get_crop_attrs(idx)
         # first rotate then crop and zoom, finally resize
         rgb_img.rotate(rot,center)
-        rgb_img.crop((left,top),(left+self.output_size,top+self.output_size))
+        rgb_img.crop((top, left), (min(480, top + self.output_size), min(640, left + self.output_size)))
         rgb_img.zoom(zoom)
         rgb_img.resize((self.output_size, self.output_size))
+        if normalise:
+            rgb_img.normalise()
+            rgb_img.img = rgb_img.img.transpose((2,0,1))
         
         return rgb_img.img
 
@@ -86,7 +89,7 @@ class Cornell(torch.utils.data.Dataset):
         depth_img.normalize()
         center,left,top = self._get_crop_attrs(idx)
         depth_img.rotate(rot,center)
-        depth_img.crop((left,top),(left+self.output_size,top+self.output_size))
+        depth_img.crop((top, left), (min(480, top + self.output_size), min(640, left + self.output_size)))
         depth_img.zoom(zoom)
         depth_img.resize((self.output_size, self.output_size))
 

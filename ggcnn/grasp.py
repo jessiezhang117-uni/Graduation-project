@@ -62,26 +62,32 @@ class Grasp:
         self.points += np.array(offset).reshape((1, 2))
     
     def rotate(self,angle,center):
+        '''
+        Rotate grasp rectangle
+        '''
         R = np.array(
             [
-                [np.cos(angle),np.sin(angle)],
-                [-1*np.sin(angle),np.cos(angle)]
+                [np.cos(angle), np.sin(angle)],
+                [-1 * np.sin(angle), np.cos(angle)],
             ]
         )
         c = np.array(center).reshape((1,2))
-        self.points = ((np.dot(R,(self.points-c).T)).T+c).astype(np.int)
+        self.points = ((np.dot(R, (self.points - c).T)).T + c).astype(np.int)
     
     def zoom(self,factor,center):
+        '''
+        Zoom grasp rectangle by given factor
+        '''
         T = np.array(
             [
                 [1/factor,0],
-                [0,1/factor]
+                [0,1/factor],
             ]
         )
         c = np.array(center).reshape((1,2))
         
         self.points = ((np.dot(T,(self.points - c).T)).T+c).astype(np.int)
-        
+
 
 
 
@@ -96,8 +102,7 @@ class Grasps:
 
     def __getattr__(self, attr):
         """
-        当用户调用某一个Grasps类中没有的属性时，查找iGrasp类中有没有这个函数，有的话就对Grasps类中的每个Grasp对象调用它。
-        这里是直接从ggcnn里面搬运过来的，高端操作
+        Test if Grasps has the desired attr as a function and call it
         """
         if hasattr(Grasp, attr) and callable(getattr(Grasp, attr)):
             return lambda *args, **kwargs: list(map(lambda gr: getattr(gr, attr)(*args, **kwargs), self.grs))
@@ -162,10 +167,13 @@ class Grasps:
 
     @property
     def center(self):
+        '''
+        Compute mean center of all grasp rectangles
+        '''
         centers = []
         for gr in self.grs:
             centers.append(gr.center)
-        center = np.mean(np.array(centers),axis = 0).astype(np.uint32)
+        center = np.mean(np.array(centers),axis = 0).astype(np.int)
         return center
 
 class Grasp_cpaw:
@@ -177,6 +185,9 @@ class Grasp_cpaw:
         
     @property
     def as_gr(self):
+        '''
+        Convert to grasp rectangle
+        '''
         xo = np.cos(self.angle)
         yo = np.sin(self.angle)
         

@@ -50,17 +50,24 @@ def max_iou(grasp_pre,grasps_true):
             max_iou = iou(grasp_pre,grasp_true)
     return max_iou
 
-def iou(grasp_pre,grasp_true):
+def iou(grasp_pre,grasp_true,angle_threshold = np.pi/6):
     '''
     calculate iou for two rectangles
     '''
+
+    if abs((grasp_pre.angle - grasp_true.angle + np.pi/2) % np.pi - np.pi/2) > angle_threshold:
+        return 0
+    
     # get the are of two rectangles
     rr1, cc1 = grasp_pre.polygon_coords() #convert center and angle to four points
     rr2, cc2 = polygon(grasp_true.points[:,0],grasp_true.points[:,1])
 
     # read max position of the two rectangles
-    r_max = max(rr1.max(),rr2.max())+1
-    c_max = max(cc1.max(),cc2.max())+1
+    try: #sometimes rr2 is empty 
+        r_max = max(rr1.max(),rr2.max())+1
+        c_max = max(cc1.max(),cc2.max())+1
+    except:
+        return 0
 
     #load canvas 
     canvas = np.zeros((r_max,c_max))

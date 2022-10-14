@@ -7,9 +7,9 @@ import os
 import numpy as np
 import sys
 import scipy.io as scio
-from simEnv import SimEnv
+from pybullet_grasp.simEnv import SimEnv
 import utils.tool as tool
-import drv_sim_grasp as DrvSim
+import pybullet_grasp.drv_sim_grasp as DrvSim
 from utils.camera import Camera
 
 
