@@ -47,6 +47,6 @@ Examples:
 	 OpenCL platform ID                          0
 	 OpenCL device ID                            0
 	 output                                      ./objects_model/objs/meshes/899af991203577f019790c8746d79a6f_col_col.obj
-	 log                                         collision_log.txt
+	 log                                         utils/collision_log.txt
 + Load mesh
 + Voxelization

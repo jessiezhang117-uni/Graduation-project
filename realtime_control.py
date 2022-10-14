@@ -4,7 +4,7 @@ import pybullet_data
 import math
 from collections import namedtuple
 from attrdict import AttrDict
-
+from simEnv import SimEnv
 
 physicsCLient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
@@ -12,8 +12,19 @@ p.setGravity(0,0,-9.81)
 
 p.resetDebugVisualizerCamera(cameraDistance=2,cameraYaw=0,cameraPitch=-40,cameraTargetPosition=[0.5,-0.9,0.5])
 
+flags = p.URDF_ENABLE_CACHED_GRAPHICS_SHAPES
 planeId = p.loadURDF("plane.urdf")
-robotId = p.loadURDF("./delta_drv90l_support/urdf/drv90l.urdf",useFixedBase=True)
+robotId = p.loadURDF("./delta_drv90l_support/urdf/drv90l.urdf",useFixedBase=True,flags=flags)
+
+
+
+start_idx = 0      
+objs_num = 5 
+database_path = './objects_model/objs'
+env = SimEnv(p, database_path,robotId)
+
+env.loadObjsInURDF(start_idx,objs_num)
+
 
 jointTypeList = ['REVOLUTE','PRISMATIC','SPHERICAL','PLANAR','FIXED']
 numJoints = p.getNumJoints(robotId)
@@ -59,6 +70,8 @@ while True:
             parameter_sim = parameter[num]
             p.setJointMotorControl2(robotId,joint.id,p.POSITION_CONTROL,targetPosition=parameter_sim)
             num = num +1
+
+
 
  
     p.stepSimulation()

@@ -1,4 +1,3 @@
-
 import pybullet as p
 from time import sleep
 import pybullet_data
@@ -29,7 +28,7 @@ robotId = p.loadURDF("./delta_drv90l_support/urdf/drv90l.urdf",useFixedBase=True
 #     p.stepSimulation()
 start_idx = 0      
 objs_num = 5 
-database_path = '/home/delta/Documents/Graduation_project_Jie/Simulation/objects_model/objs'
+database_path = './objects_model/objs'
 env = SimEnv(p, database_path,robotId)
 
 env.loadObjsInURDF(start_idx,objs_num)
