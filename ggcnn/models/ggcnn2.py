@@ -63,16 +63,16 @@ class GGCNN2(nn.Module):
         width_output = self.width_output(x)
 
         return pos_output, cos_output, sin_output, width_output
-    
+
     def compute_loss(self, xc, yc):
         y_pos, y_cos, y_sin, y_width = yc
         pos_pred, cos_pred, sin_pred, width_pred = self(xc)
-        
+
         p_loss = F.mse_loss(pos_pred, y_pos)
         cos_loss = F.mse_loss(cos_pred, y_cos)
         sin_loss = F.mse_loss(sin_pred, y_sin)
         width_loss = F.mse_loss(width_pred, y_width)
-        
+
         return {
             'loss': p_loss + cos_loss + sin_loss + width_loss,
             'losses': {
