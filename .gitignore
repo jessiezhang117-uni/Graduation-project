@@ -2,3 +2,4 @@
 /ggcnn/tensorboard/
 /GR-ConvNet/logs/
 /dataset/
+__pycache__/
