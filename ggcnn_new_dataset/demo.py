@@ -1,10 +1,3 @@
-'''
-Description: 
-Author: wangdx
-Date: 2021-11-28 13:47:41
-LastEditTime: 2021-11-28 14:33:57
-'''
-
 import cv2
 import os
 import torch

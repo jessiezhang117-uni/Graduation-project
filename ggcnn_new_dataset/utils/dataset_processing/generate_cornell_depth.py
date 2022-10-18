@@ -3,7 +3,7 @@ import os
 import numpy as np
 from imageio import imsave
 import argparse
-from utils.dataset_processing.image import DepthImage
+from image import DepthImage
 
 
 if __name__ == '__main__':

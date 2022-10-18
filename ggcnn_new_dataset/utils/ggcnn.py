@@ -1,18 +1,3 @@
-'''
-Description: 
-Author: wangdx
-Date: 2021-11-28 13:48:33
-LastEditTime: 2021-11-28 14:34:42
-'''
-# -*- coding: utf-8 -*-
-"""
-@ Time ： 2020/3/2 11:33
-@ Auth ： wangdx
-@ File ：affga.py
-@ IDE ：PyCharm
-@ Function : 
-"""
-
 import cv2
 import os
 import torch
@@ -28,11 +13,12 @@ from models import get_network
 def input_img(img, out_size=300):
     """
     对图像进行裁剪，保留中间(320, 320)的图像
-    :param file: rgb文件
-    :return: 直接输入网络的tensor, 裁剪区域的左上角坐标
+    Crop the images
+    :param file: rgb file
+    :return: input tensor, left top coordinate 
     """
 
-    assert img.shape[0] >= out_size and img.shape[1] >= out_size, '输入的深度图必须大于等于(320, 320)'
+    assert img.shape[0] >= out_size and img.shape[1] >= out_size, 'input depth image shape must bigger or equal to (300, 300)'
 
     # 裁剪中间图像块
     crop_x1 = int((img.shape[1] - out_size) / 2)
@@ -41,11 +27,10 @@ def input_img(img, out_size=300):
     crop_y2 = crop_y1 + out_size
     img = img[crop_y1:crop_y2, crop_x1:crop_x2]
 
-    # 归一化
+    # normalize
     img = np.clip(img - img.mean(), -1., 1.)
 
-    # 调整顺序，和网络输入一致
-    tensor = torch.from_numpy(img[np.newaxis, np.newaxis, :, :])  # np转tensor
+    tensor = torch.from_numpy(img[np.newaxis, np.newaxis, :, :])  # np to tensor
 
     return tensor, crop_x1, crop_y1
 

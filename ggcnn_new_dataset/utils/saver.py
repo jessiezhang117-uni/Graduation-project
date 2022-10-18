@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-@Time ： 2020/3/31 19:38
-@Auth ： 王德鑫
-@File ：saver.py
-@IDE ：PyCharm
-@Function: 用于保存 summary model 预测图
-"""
 import os
 import cv2
 import sys

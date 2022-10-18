@@ -16,7 +16,7 @@ from utils.dataset_processing import mmcv
 
 
 class GraspDataset(torch.utils.data.Dataset):
-    def __init__(self, file_path, start=0.0, end=1.0, ds_rotate=0, output_size=360, include_depth=True, include_rgb=False, argument=False):
+    def __init__(self, file_path, start=0.0, end=1.0, ds_rotate=0, output_size=300, include_depth=True, include_rgb=False, argument=False):
         """
         :param output_size: int 
         :param include_depth: bool
