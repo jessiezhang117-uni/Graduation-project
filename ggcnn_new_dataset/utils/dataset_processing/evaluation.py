@@ -6,7 +6,7 @@ from torch.jit import Error
 import torch.nn.functional as F
 import numpy as np
 import sys
-sys.path.append('/home/wangdx/research/grasp_detection/sim_grasp/sgdn/')
+
 from utils.data.structure.grasp import GRASP_WIDTH_MAX
 
 
