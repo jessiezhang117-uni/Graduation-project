@@ -4,16 +4,16 @@ import math
 
 useNullSpace = 1
 ikSolver = 0
-drvEndEffectorIndex = 11 #8
-drvNumDofs = 7
+drvEndEffectorIndex = 9 #11
+drvNumDofs = 6
 
-ll = [-7]*drvNumDofs
+ll = [-6]*drvNumDofs
 #upper limits for null space (todo: set them to proper range)
-ul = [7]*drvNumDofs
+ul = [6]*drvNumDofs
 #joint ranges for null space (todo: set them to proper range)
-jr = [7]*drvNumDofs
+jr = [6]*drvNumDofs
 # restposes for null space
-jointPositions=(0.8045609285966308, 0.525471701354679, -0.02519566900946519, -1.3925086098003587, 0.013443782914225877, 1.9178323512245277, -0.007207024243406651, 0.01999436579245478, 0.019977024051412193)
+jointPositions=(0, 0, 0, 0, 0, 0, 0, 0)
             # [0.98, 0.458, 0.31, -2.24, -0.30, 2.66, 2.32, 0.02, 0.02]
 rp = jointPositions
 
@@ -33,9 +33,9 @@ class DrvSim(object):
         self.gripper_height = 0.2
         #create a constraint to keep the fingers centered
         c = self.p.createConstraint(self.robotId,
-                          9,
+                          7,
                           self.robotId,
-                          10,
+                          8,
                           jointType=self.p.JOINT_GEAR,
                           jointAxis=[1, 0, 0],
                           parentFramePosition=[0, 0, 0],
@@ -67,11 +67,11 @@ class DrvSim(object):
         self.setArm(jointPoses)
 
     def setArm(self, jointPoses, maxVelocity=10):
-        for i in range(drvNumDofs):   # 7
+        for i in range(drvNumDofs):   # 6
             self.p.setJointMotorControl2(self.robotId, i, self.p.POSITION_CONTROL, jointPoses[i], force=5 * 240., maxVelocity=maxVelocity)
     
     def setGripper(self, finger_target):
-        for i in [9,10]:
+        for i in [7,8]:
             self.p.setJointMotorControl2(self.robotId, i, self.p.POSITION_CONTROL, finger_target, force=20)
 
 

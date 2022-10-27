@@ -28,6 +28,7 @@ env.loadObjsInURDF(start_idx,objs_num)
 
 jointTypeList = ['REVOLUTE','PRISMATIC','SPHERICAL','PLANAR','FIXED']
 numJoints = p.getNumJoints(robotId)
+print(numJoints)
 jointInfo = namedtuple('JointInfo',['id','name','type','lowrLimit','upperLimit','maxForce','maxVelocity'])
 joints = AttrDict()
 
@@ -45,7 +46,7 @@ for i in range(numJoints):
     joints[singleInfo.name] = singleInfo
 
 print(joints)
-
+#print(p.getJointStates(robotId,[i for i in range (0,numJoints)]))
 position_control_group = []
 position_control_group.append(p.addUserDebugParameter('joint_1',-2.96706,2.96706))
 position_control_group.append(p.addUserDebugParameter('joint_2',-1.8326,2.35619))

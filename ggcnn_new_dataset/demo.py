@@ -53,8 +53,8 @@ def drawRect(img, rect):
 
 if __name__ == '__main__':
     # 模型路径
-    model = './ckpt/epoch_0213_acc_0.6374.pth'
-    input_path = 'data'
+    model = './ggcnn_new_dataset/output/models/221018_1353_/epoch_0909_acc_0.7102.pth'
+    input_path = './dataset/cornell'
 
     # 运行设备
     device_name = "cuda:0" if torch.cuda.is_available() else "cpu"

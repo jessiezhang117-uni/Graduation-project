@@ -13,9 +13,7 @@ import sys
 import scipy.stats as ss
 import skimage.transform as skt
 sys.path.append('/home/delta/Documents/Graduation_project_Jie/Simulation')
-# from utils.mesh import Mesh
-# import utils.tool as tool
-# from utils.camera import Camera
+
 
 # Image size
 IMAGEWIDTH = 640
@@ -90,19 +88,22 @@ class SimEnv(object):
         """
         self.p = bullet_client
         # self.p.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
+        # maxNumCmdPer1ms: add 1ms sleep if the number of commands executed exceed this threshold
+        # solverResidualThreshold: velocity threshold
+        # eneableFileCaching: set to 0 to disable file caching
         self.p.setPhysicsEngineParameter(maxNumCmdPer1ms=1000, solverResidualThreshold=0, enableFileCaching=0)
-        self.p.resetDebugVisualizerCamera(cameraDistance=1.0, cameraYaw=0, cameraPitch=-40, cameraTargetPosition=[0.5, -0.9, 0.5])
+        self.p.resetDebugVisualizerCamera(cameraDistance=1.7, cameraYaw=78, cameraPitch=-24, cameraTargetPosition=[0, 0, 0])
         self.p.setAdditionalSearchPath(pybullet_data.getDataPath())  
         self.planeId = self.p.loadURDF("plane.urdf", [0, 0, 0])     
         # self.trayId = self.p.loadURDF('objects_model/tray/tray_small.urdf', [0, 0, -0.007])
         self.p.setGravity(0, 0, -10) 
-        self.flags = self.p.URDF_ENABLE_CACHED_GRAPHICS_SHAPES
+        self.flags = self.p.URDF_ENABLE_CACHED_GRAPHICS_SHAPES # cache and re-use graphics shapes, improve loading performance
         self.gripperId = gripperId
 
         # load camera
         self.movecamera(0, 0)
         self.projectionMatrix = self.p.computeProjectionMatrixFOV(fov, aspect, nearPlane, farPlane)
-
+       
         # read object_list.txt
         list_file = os.path.join(path, 'object_list.txt')
         if not os.path.exists(list_file):
@@ -130,7 +131,7 @@ class SimEnv(object):
         move camera to target position
         x, y: world coordinates x,y
         """
-        self.viewMatrix = self.p.computeViewMatrix([x, y, z], [x, y, 0], [0, 1, 0])   # camera height fix to 0.7m
+        self.viewMatrix = self.p.computeViewMatrix(cameraEyePosition=[x, y, z],cameraTargetPosition=[x, y, 0], cameraUpVector=[0, 1, 0])   # camera height fix to 0.7m
 
 
 
@@ -163,9 +164,9 @@ class SimEnv(object):
         # baseOrientation = [0, 0, 0, 1]    # fixed orientation
 
         # randomalize position
-        pos = 0.4
-        basePosition = [random.uniform(1 * pos, pos), random.uniform(1 * pos, pos), random.uniform(0.1, 0.4)] 
-        # basePosition = [random.uniform(-1 * pos, pos), random.uniform(-1 * pos, pos), -1*min_z] 
+        pos = 0.1
+        #basePosition = [random.uniform(1 * pos, pos), random.uniform(1 * pos, pos), random.uniform(0.1, 0.4)] 
+        basePosition = [random.uniform(-1 * pos, pos), random.uniform(-1 * pos, pos), random.uniform(0.1,0.4)] 
         # basePosition = [0.05, -0.1, 0.05] # fixed position 
 
         # load objects
@@ -209,8 +210,9 @@ class SimEnv(object):
         self.urdfs_scale = []
         for i in range(self.num_urdf):
             # randomlize position
-            pos = 0.5
-            basePosition = [random.uniform(pos, 1), 0, random.uniform(0.2, 0.3)] 
+            pos = 0.1
+            #basePosition = [random.uniform(pos, 1), 0, random.uniform(0.2, 0.3)]
+            basePosition = [random.uniform(-1 * pos, pos), random.uniform(-1 * pos, pos), random.uniform(0.2,0.3)]  
             #basePosition = [0.5, 0, 0] # fixed position
 
             # randomlize orientation

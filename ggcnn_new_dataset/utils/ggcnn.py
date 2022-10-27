@@ -60,7 +60,7 @@ class GGCNN:
         self.num = 0
         self.device = device
         # 加载模型
-        print('>> loading AFFGA')
+        print('>> loading network')
         ggcnn = get_network(network)
         self.net = ggcnn()
         self.net.load_state_dict(torch.load(model, map_location=self.device), strict=True)   # True:完全吻合，False:只加载键值相同的参数，其他加载默认值。
