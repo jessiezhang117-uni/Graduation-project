@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import math
 import scipy.io as scio
-from utils.dataset_processing import mmcv
+from ggcnn_new_dataset.utils.dataset_processing import mmcv
 
 
 GRASP_WIDTH_MAX = 200.0

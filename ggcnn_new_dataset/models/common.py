@@ -6,7 +6,7 @@ LastEditTime: 2021-11-28 12:51:02
 '''
 import torch
 from skimage.filters import gaussian
-from utils.data.structure.grasp import GRASP_WIDTH_MAX
+from ggcnn_new_dataset.utils.data.structure.grasp import GRASP_WIDTH_MAX
 
 
 def post_process_output(q_img, cos_img, sin_img, width_img):

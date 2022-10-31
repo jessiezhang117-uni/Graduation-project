@@ -1,0 +1,328 @@
+[15:15:04] {/home/delta/Documents/Graduation_project_Jie/Simulation/robotic-grasping/hardware/device.py:11} INFO - CUDA detected. Running with GPU acceleration.
+[15:15:04] {robotic-grasping/train_network.py:247} INFO - Loading Cornell Dataset...
+[15:15:04] {robotic-grasping/train_network.py:256} INFO - Dataset size is 885
+[15:15:04] {robotic-grasping/train_network.py:265} INFO - Training size: 796
+[15:15:04] {robotic-grasping/train_network.py:266} INFO - Validation size: 89
+[15:15:04] {robotic-grasping/train_network.py:284} INFO - Done
+[15:15:04] {robotic-grasping/train_network.py:287} INFO - Loading Network...
+[15:15:05] {robotic-grasping/train_network.py:298} INFO - Done
+[15:15:07] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 00
+[15:15:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 100, Loss: 0.1218
+[15:15:50] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 200, Loss: 0.1627
+[15:16:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 300, Loss: 0.2092
+[15:16:16] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 400, Loss: 0.0946
+[15:16:29] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 500, Loss: 0.2319
+[15:16:42] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 600, Loss: 0.0451
+[15:16:55] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 700, Loss: 0.0615
+[15:17:08] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 800, Loss: 0.0805
+[15:17:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 0, Batch: 900, Loss: 0.1052
+[15:17:35] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:17:38] {robotic-grasping/train_network.py:328} INFO - 26/89 = 0.292135
+[15:17:38] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 01
+[15:17:51] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 100, Loss: 0.0879
+[15:18:05] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 200, Loss: 0.2064
+[15:18:18] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 300, Loss: 0.1029
+[15:18:31] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 400, Loss: 0.1086
+[15:18:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 500, Loss: 0.0578
+[15:18:58] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 600, Loss: 0.0998
+[15:19:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 700, Loss: 0.0431
+[15:19:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 800, Loss: 0.0724
+[15:19:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 1, Batch: 900, Loss: 0.0928
+[15:19:52] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:19:54] {robotic-grasping/train_network.py:328} INFO - 58/89 = 0.651685
+[15:19:54] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 02
+[15:20:07] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 100, Loss: 0.0986
+[15:20:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 200, Loss: 0.0571
+[15:20:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 300, Loss: 0.0875
+[15:20:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 400, Loss: 0.0750
+[15:21:01] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 500, Loss: 0.0923
+[15:21:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 600, Loss: 0.0661
+[15:21:28] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 700, Loss: 0.0645
+[15:21:42] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 800, Loss: 0.0333
+[15:21:55] {robotic-grasping/train_network.py:175} INFO - Epoch: 2, Batch: 900, Loss: 0.1387
+[15:22:09] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:22:12] {robotic-grasping/train_network.py:328} INFO - 71/89 = 0.797753
+[15:22:12] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 03
+[15:22:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 100, Loss: 0.1282
+[15:22:39] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 200, Loss: 0.0567
+[15:22:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 300, Loss: 0.0925
+[15:23:06] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 400, Loss: 0.0462
+[15:23:19] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 500, Loss: 0.0946
+[15:23:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 600, Loss: 0.0680
+[15:23:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 700, Loss: 0.0771
+[15:24:00] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 800, Loss: 0.1403
+[15:24:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 3, Batch: 900, Loss: 0.1179
+[15:24:27] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:24:30] {robotic-grasping/train_network.py:328} INFO - 61/89 = 0.685393
+[15:24:30] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 04
+[15:24:43] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 100, Loss: 0.0670
+[15:24:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 200, Loss: 0.0974
+[15:25:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 300, Loss: 0.0794
+[15:25:24] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 400, Loss: 0.0707
+[15:25:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 500, Loss: 0.0972
+[15:25:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 600, Loss: 0.0919
+[15:26:06] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 700, Loss: 0.0565
+[15:26:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 800, Loss: 0.0916
+[15:26:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 4, Batch: 900, Loss: 0.1356
+[15:26:48] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:26:50] {robotic-grasping/train_network.py:328} INFO - 58/89 = 0.651685
+[15:26:50] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 05
+[15:27:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 100, Loss: 0.0767
+[15:27:17] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 200, Loss: 0.1066
+[15:27:31] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 300, Loss: 0.1058
+[15:27:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 400, Loss: 0.0316
+[15:27:58] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 500, Loss: 0.0463
+[15:28:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 600, Loss: 0.0374
+[15:28:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 700, Loss: 0.1664
+[15:28:39] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 800, Loss: 0.0676
+[15:28:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 5, Batch: 900, Loss: 0.0384
+[15:29:06] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:29:08] {robotic-grasping/train_network.py:328} INFO - 71/89 = 0.797753
+[15:29:08] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 06
+[15:29:22] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 100, Loss: 0.0995
+[15:29:35] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 200, Loss: 0.0445
+[15:29:48] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 300, Loss: 0.0623
+[15:30:02] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 400, Loss: 0.0539
+[15:30:15] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 500, Loss: 0.1697
+[15:30:29] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 600, Loss: 0.0193
+[15:30:42] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 700, Loss: 0.0370
+[15:30:55] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 800, Loss: 0.0793
+[15:31:09] {robotic-grasping/train_network.py:175} INFO - Epoch: 6, Batch: 900, Loss: 0.1537
+[15:31:23] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:31:25] {robotic-grasping/train_network.py:328} INFO - 82/89 = 0.921348
+[15:31:25] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 07
+[15:31:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 100, Loss: 0.0589
+[15:31:51] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 200, Loss: 0.0402
+[15:32:05] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 300, Loss: 0.0528
+[15:32:18] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 400, Loss: 0.0353
+[15:32:32] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 500, Loss: 0.0614
+[15:32:45] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 600, Loss: 0.2529
+[15:32:58] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 700, Loss: 0.0368
+[15:33:12] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 800, Loss: 0.1822
+[15:33:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 7, Batch: 900, Loss: 0.0846
+[15:33:39] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:33:41] {robotic-grasping/train_network.py:328} INFO - 80/89 = 0.898876
+[15:33:41] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 08
+[15:33:54] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 100, Loss: 0.0611
+[15:34:08] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 200, Loss: 0.0597
+[15:34:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 300, Loss: 0.0347
+[15:34:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 400, Loss: 0.0528
+[15:34:48] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 500, Loss: 0.0266
+[15:35:01] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 600, Loss: 0.0631
+[15:35:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 700, Loss: 0.0990
+[15:35:28] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 800, Loss: 0.1288
+[15:35:41] {robotic-grasping/train_network.py:175} INFO - Epoch: 8, Batch: 900, Loss: 0.1122
+[15:35:55] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:35:57] {robotic-grasping/train_network.py:328} INFO - 78/89 = 0.876404
+[15:35:57] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 09
+[15:36:10] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 100, Loss: 0.0465
+[15:36:24] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 200, Loss: 0.0349
+[15:36:37] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 300, Loss: 0.1036
+[15:36:51] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 400, Loss: 0.0457
+[15:37:04] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 500, Loss: 0.0961
+[15:37:17] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 600, Loss: 0.0523
+[15:37:31] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 700, Loss: 0.0496
+[15:37:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 800, Loss: 0.1130
+[15:37:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 9, Batch: 900, Loss: 0.0310
+[15:38:11] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:38:13] {robotic-grasping/train_network.py:328} INFO - 69/89 = 0.775281
+[15:38:13] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 10
+[15:38:26] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 100, Loss: 0.0544
+[15:38:40] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 200, Loss: 0.1022
+[15:38:53] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 300, Loss: 0.0774
+[15:39:07] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 400, Loss: 0.0294
+[15:39:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 500, Loss: 0.1325
+[15:39:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 600, Loss: 0.1271
+[15:39:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 700, Loss: 0.0797
+[15:40:00] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 800, Loss: 0.1144
+[15:40:13] {robotic-grasping/train_network.py:175} INFO - Epoch: 10, Batch: 900, Loss: 0.0358
+[15:40:27] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:40:29] {robotic-grasping/train_network.py:328} INFO - 80/89 = 0.898876
+[15:40:29] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 11
+[15:40:42] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 100, Loss: 0.0637
+[15:40:56] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 200, Loss: 0.0460
+[15:41:09] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 300, Loss: 0.1184
+[15:41:22] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 400, Loss: 0.0475
+[15:41:36] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 500, Loss: 0.0328
+[15:41:49] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 600, Loss: 0.0523
+[15:42:02] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 700, Loss: 0.0754
+[15:42:16] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 800, Loss: 0.0428
+[15:42:29] {robotic-grasping/train_network.py:175} INFO - Epoch: 11, Batch: 900, Loss: 0.0788
+[15:42:43] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:42:45] {robotic-grasping/train_network.py:328} INFO - 74/89 = 0.831461
+[15:42:45] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 12
+[15:42:58] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 100, Loss: 0.0539
+[15:43:12] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 200, Loss: 0.1111
+[15:43:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 300, Loss: 0.0982
+[15:43:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 400, Loss: 0.0438
+[15:43:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 500, Loss: 0.0468
+[15:44:05] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 600, Loss: 0.0580
+[15:44:18] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 700, Loss: 0.0459
+[15:44:32] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 800, Loss: 0.1219
+[15:44:45] {robotic-grasping/train_network.py:175} INFO - Epoch: 12, Batch: 900, Loss: 0.0268
+[15:44:59] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:45:01] {robotic-grasping/train_network.py:328} INFO - 80/89 = 0.898876
+[15:45:01] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 13
+[15:45:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 100, Loss: 0.0816
+[15:45:27] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 200, Loss: 0.0572
+[15:45:41] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 300, Loss: 0.0579
+[15:45:54] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 400, Loss: 0.0807
+[15:46:08] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 500, Loss: 0.0616
+[15:46:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 600, Loss: 0.0494
+[15:46:35] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 700, Loss: 0.0361
+[15:46:49] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 800, Loss: 0.0956
+[15:47:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 13, Batch: 900, Loss: 0.0601
+[15:47:17] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:47:19] {robotic-grasping/train_network.py:328} INFO - 79/89 = 0.887640
+[15:47:19] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 14
+[15:47:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 100, Loss: 0.0417
+[15:47:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 200, Loss: 0.0882
+[15:48:00] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 300, Loss: 0.0753
+[15:48:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 400, Loss: 0.0755
+[15:48:28] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 500, Loss: 0.0360
+[15:48:42] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 600, Loss: 0.0901
+[15:48:55] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 700, Loss: 0.0756
+[15:49:09] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 800, Loss: 0.0510
+[15:49:23] {robotic-grasping/train_network.py:175} INFO - Epoch: 14, Batch: 900, Loss: 0.0820
+[15:49:37] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:49:39] {robotic-grasping/train_network.py:328} INFO - 75/89 = 0.842697
+[15:49:39] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 15
+[15:49:53] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 100, Loss: 0.0737
+[15:50:07] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 200, Loss: 0.0349
+[15:50:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 300, Loss: 0.0549
+[15:50:35] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 400, Loss: 0.0472
+[15:50:48] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 500, Loss: 0.0660
+[15:51:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 600, Loss: 0.0584
+[15:51:16] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 700, Loss: 0.0404
+[15:51:30] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 800, Loss: 0.0737
+[15:51:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 15, Batch: 900, Loss: 0.0282
+[15:51:58] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:52:00] {robotic-grasping/train_network.py:328} INFO - 77/89 = 0.865169
+[15:52:00] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 16
+[15:52:13] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 100, Loss: 0.1238
+[15:52:27] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 200, Loss: 0.0709
+[15:52:40] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 300, Loss: 0.0423
+[15:52:54] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 400, Loss: 0.0325
+[15:53:08] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 500, Loss: 0.0252
+[15:53:22] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 600, Loss: 0.0603
+[15:53:36] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 700, Loss: 0.0759
+[15:53:49] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 800, Loss: 0.0244
+[15:54:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 16, Batch: 900, Loss: 0.1076
+[15:54:17] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:54:19] {robotic-grasping/train_network.py:328} INFO - 80/89 = 0.898876
+[15:54:19] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 17
+[15:54:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 100, Loss: 0.0578
+[15:54:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 200, Loss: 0.0411
+[15:55:01] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 300, Loss: 0.0882
+[15:55:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 400, Loss: 0.0564
+[15:55:28] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 500, Loss: 0.0526
+[15:55:41] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 600, Loss: 0.0434
+[15:55:55] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 700, Loss: 0.1023
+[15:56:09] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 800, Loss: 0.0531
+[15:56:23] {robotic-grasping/train_network.py:175} INFO - Epoch: 17, Batch: 900, Loss: 0.0591
+[15:56:37] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:56:40] {robotic-grasping/train_network.py:328} INFO - 75/89 = 0.842697
+[15:56:40] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 18
+[15:56:53] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 100, Loss: 0.0265
+[15:57:07] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 200, Loss: 0.0545
+[15:57:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 300, Loss: 0.0372
+[15:57:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 400, Loss: 0.1317
+[15:57:48] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 500, Loss: 0.0301
+[15:58:02] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 600, Loss: 0.0438
+[15:58:15] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 700, Loss: 0.0840
+[15:58:29] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 800, Loss: 0.0541
+[15:58:43] {robotic-grasping/train_network.py:175} INFO - Epoch: 18, Batch: 900, Loss: 0.0311
+[15:58:56] {robotic-grasping/train_network.py:326} INFO - Validating...
+[15:58:59] {robotic-grasping/train_network.py:328} INFO - 74/89 = 0.831461
+[15:58:59] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 19
+[15:59:12] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 100, Loss: 0.0941
+[15:59:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 200, Loss: 0.0316
+[15:59:39] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 300, Loss: 0.0928
+[15:59:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 400, Loss: 0.0377
+[16:00:06] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 500, Loss: 0.0264
+[16:00:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 600, Loss: 0.0590
+[16:00:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 700, Loss: 0.0343
+[16:00:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 800, Loss: 0.0469
+[16:01:01] {robotic-grasping/train_network.py:175} INFO - Epoch: 19, Batch: 900, Loss: 0.0430
+[16:01:15] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:01:17] {robotic-grasping/train_network.py:328} INFO - 79/89 = 0.887640
+[16:01:17] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 20
+[16:01:30] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 100, Loss: 0.0140
+[16:01:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 200, Loss: 0.0355
+[16:01:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 300, Loss: 0.0376
+[16:02:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 400, Loss: 0.0277
+[16:02:24] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 500, Loss: 0.0440
+[16:02:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 600, Loss: 0.0438
+[16:02:51] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 700, Loss: 0.0605
+[16:03:05] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 800, Loss: 0.0317
+[16:03:18] {robotic-grasping/train_network.py:175} INFO - Epoch: 20, Batch: 900, Loss: 0.0455
+[16:03:33] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:03:35] {robotic-grasping/train_network.py:328} INFO - 82/89 = 0.921348
+[16:03:35] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 21
+[16:03:49] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 100, Loss: 0.0765
+[16:04:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 200, Loss: 0.0408
+[16:04:16] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 300, Loss: 0.0353
+[16:04:30] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 400, Loss: 0.0239
+[16:04:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 500, Loss: 0.0492
+[16:04:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 600, Loss: 0.0205
+[16:05:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 700, Loss: 0.0389
+[16:05:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 800, Loss: 0.0750
+[16:05:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 21, Batch: 900, Loss: 0.0443
+[16:05:52] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:05:54] {robotic-grasping/train_network.py:328} INFO - 83/89 = 0.932584
+[16:05:54] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 22
+[16:06:08] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 100, Loss: 0.0366
+[16:06:21] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 200, Loss: 0.0767
+[16:06:35] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 300, Loss: 0.0823
+[16:06:49] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 400, Loss: 0.0529
+[16:07:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 500, Loss: 0.0517
+[16:07:16] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 600, Loss: 0.0385
+[16:07:30] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 700, Loss: 0.0522
+[16:07:43] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 800, Loss: 0.0614
+[16:07:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 22, Batch: 900, Loss: 0.0684
+[16:08:11] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:08:13] {robotic-grasping/train_network.py:328} INFO - 81/89 = 0.910112
+[16:08:13] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 23
+[16:08:26] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 100, Loss: 0.0526
+[16:08:40] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 200, Loss: 0.1064
+[16:08:53] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 300, Loss: 0.0737
+[16:09:07] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 400, Loss: 0.0530
+[16:09:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 500, Loss: 0.0701
+[16:09:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 600, Loss: 0.0343
+[16:09:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 700, Loss: 0.0780
+[16:10:00] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 800, Loss: 0.0507
+[16:10:14] {robotic-grasping/train_network.py:175} INFO - Epoch: 23, Batch: 900, Loss: 0.0489
+[16:10:28] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:10:30] {robotic-grasping/train_network.py:328} INFO - 82/89 = 0.921348
+[16:10:30] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 24
+[16:10:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 100, Loss: 0.1286
+[16:10:57] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 200, Loss: 0.0614
+[16:11:11] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 300, Loss: 0.0678
+[16:11:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 400, Loss: 0.0625
+[16:11:38] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 500, Loss: 0.0803
+[16:11:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 600, Loss: 0.0959
+[16:12:06] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 700, Loss: 0.0586
+[16:12:20] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 800, Loss: 0.0808
+[16:12:34] {robotic-grasping/train_network.py:175} INFO - Epoch: 24, Batch: 900, Loss: 0.0434
+[16:12:48] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:12:50] {robotic-grasping/train_network.py:328} INFO - 77/89 = 0.865169
+[16:12:50] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 25
+[16:13:03] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 100, Loss: 0.0696
+[16:13:17] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 200, Loss: 0.0564
+[16:13:30] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 300, Loss: 0.0634
+[16:13:44] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 400, Loss: 0.1054
+[16:13:58] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 500, Loss: 0.0410
+[16:14:12] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 600, Loss: 0.0513
+[16:14:25] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 700, Loss: 0.1041
+[16:14:39] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 800, Loss: 0.0395
+[16:14:52] {robotic-grasping/train_network.py:175} INFO - Epoch: 25, Batch: 900, Loss: 0.0716
+[16:15:06] {robotic-grasping/train_network.py:326} INFO - Validating...
+[16:15:08] {robotic-grasping/train_network.py:328} INFO - 77/89 = 0.865169
+[16:15:08] {robotic-grasping/train_network.py:317} INFO - Beginning Epoch 26
+[16:15:22] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 100, Loss: 0.0720
+[16:15:36] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 200, Loss: 0.0609
+[16:15:50] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 300, Loss: 0.0898
+[16:16:04] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 400, Loss: 0.0536
+[16:16:18] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 500, Loss: 0.0328
+[16:16:33] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 600, Loss: 0.0886
+[16:16:47] {robotic-grasping/train_network.py:175} INFO - Epoch: 26, Batch: 700, Loss: 0.0289
